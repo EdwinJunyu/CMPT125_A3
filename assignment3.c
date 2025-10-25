@@ -41,7 +41,7 @@ int reduce(int* A, int n, int (*f)(int,int)) {
   int acc = A[0];
   for (int i = 1; i < n; i++)
   {
-    acc += f(acc,A[i]); 
+    acc = f(acc,A[i]); 
   }
   return acc;    
 }
@@ -127,3 +127,4 @@ int compare(const void* a, const void* b) {  //helper function
 void sort_strings(const char* A[], int n) {
   qsort(A, n, sizeof(char*), compare);
 }
+
